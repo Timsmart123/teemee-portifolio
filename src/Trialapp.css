@@ -69,6 +69,8 @@ body{
 #nav-links > a{
   color: #E5E7EB;
   text-decoration: none;
+  text-align: center;
+  padding:  0px 15px 10px 15px;
 }
 #nav-links > a:active{
   text-decoration: line-through;
@@ -80,10 +82,9 @@ body{
   border-bottom: 2px solid var(--prim-color) ;
 }
 #nav-links{
-  padding: 20px ;
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  padding: 10px 10px 0;;
 }
 
 
