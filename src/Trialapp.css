@@ -1,0 +1,325 @@
+/* PRE-SET STYLING */
+html{
+  /* To let system decide on default B/W the color */
+  /* color-scheme: light dark; */
+
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+*{
+  font-family:monospace;
+  margin: 0;
+  /* smooth transition from sections - RMR to make em id be the link to the button or link  */
+  /*   scroll-margin-top: 30px;*/ /* match navbar height - don't forget to add that to each id div's styling*/
+  scroll-behavior:smooth;
+
+  /* CSS debugger */
+  /* outline: 1px solid limegreen !important; */
+}
+:root{
+  /* FOR SETTING COLOR CODES - RMR to recall as var()*/
+  --prim-color: #22C55E ;
+  --alt-color: #4ADE80;
+  --sec-color: #020617;
+  --alt2-color: #111827 ;
+}
+img{
+  max-width: 100%;
+  display: block;
+} 
+h1, h2, h3,.Navbar,a {
+  font-family: 'Inter','Roboto',"Montserrat","IBM Plex Sans",sans-serif;
+}
+body{
+  font-family: 'Fira Code','Source Code Pro','Courier New','Courier',monospace;
+  /* width: max(65ch, 100% - 4rem); */
+  margin-inline: auto;
+}
+/* MOTION SICKNESS PREVENT */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* Next Styling */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  background-color: var(--sec-color);
+  color: var(--prim-color);
+}
+#nav-links {
+  margin-left: 0;
+}
+
+.Navbar > h2{
+  margin: 0px 10px;
+  color: var(--prim-color) ;
+}
+
+#nav-links > a{
+  color: #E5E7EB;
+  text-decoration: none;
+}
+#nav-links > a:active{
+  text-decoration: line-through;
+  background-color: var(--alt2-color);
+  color: var(--prim-color) ;
+}
+#nav-links > a:hover{
+  color: var(--alt-color);
+  border-bottom: 2px solid var(--prim-color) ;
+}
+#nav-links{
+  padding: 20px ;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+
+/* IF YOU WANT A VIDEO BACKGROUND to a hero and have text overlay it */
+.video-bg {
+  filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#hero{
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+#hero::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.Hero{
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  inset: 0;
+  z-index: 1;
+}
+.Hero > h2 {
+  color: #E5E7EB;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  max-width: 900px;
+}
+
+.Hero > p {
+  color: #9CA3AF;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  margin: 1rem 0;
+  max-width: 700px;
+}
+.btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+.btns > a:first-child {
+  background-color: var(--prim-color);
+  border: 0;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  color: #022c22;
+  text-decoration: none;
+}
+
+.btns >:first-child:hover{
+  background-color: var(--alt-color);
+}
+
+.btns > :last-child{
+  background-color: transparent;
+  border: 1px solid var(--prim-color) ;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  color: #E5E7EB;
+  text-decoration: none;
+}
+.btns > :last-child:hover{
+  background-color: #022C22;
+  border: 1px solid var(--alt-color);
+  color: #E5E7EB;
+}
+
+section > h1{
+  text-align: center;
+  font-size: 50px;
+  color: var(--alt-color);
+  margin-bottom: 30px;
+  text-shadow: 1px 2px 20px var(--prim-color) ;
+}
+
+.projectBtn,
+.btns>a {
+  transition: 
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.projectBtn:hover,
+.btns>a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.35);
+}
+
+.projectBtn:active,
+.btns>a:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+.projectRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  background-color: #111827;
+}
+.projectRow.Reversed{
+  background-color: #17191F; /* alternate rows */
+  flex-direction: row-reverse;
+}
+.projectRow> .descript{
+  padding: 2rem;
+  border-left: 4px solid #22c55e;
+}
+.projectRow.Reversed> .descript{
+  border-left: none;
+  border-right: 4px solid #22c55e;
+}
+section {
+  background-color: #0F1115;
+  color: #E5E7EB;
+  padding: 2rem 2rem;
+  margin-top: -1px;
+  scroll-margin-top: 30px; /* match navbar height */
+}
+
+.projectRow > div {
+  max-width: 470px;
+}
+.projectRow img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+ }
+
+.projectRow img:hover {
+  transform: scale(1.03);
+}
+
+.projectBtn {
+  display: inline-block;
+  margin-top: 1rem;
+  border: 1px solid #22C55E;
+  background-color: var(--prim-color);
+  border-radius: 8px;
+  padding: 10px 80px;
+  text-decoration: none;
+  color: #111827;
+}
+.projectBtn:hover {
+  background-color: transparent;
+  color: #22C55E;
+}
+.descript>h2{
+  font-size: 35px;
+  color: #22c55e;
+  padding-bottom: 30px;
+}
+.descript>p{
+  color: #9CA3AF;
+}
+
+@media (max-width: 768px) {
+  .projectRow,
+  .projectRow.Reversed {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .projectRow> .descript, .projectRow.Reversed >.descript{
+    border: none;
+  }
+  #about img{
+    display: none;
+  }
+
+
+}
+/* GGs bru TS works just keep it for ok */
+
+.info{
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  align-items:center;
+  padding: 3rem 0;
+}
+#about{
+  background-color: #0F1115;
+}
+#about>p{
+  padding: 2rem;
+}
+#contact{
+  background-color: #0F1115;
+  color: #E5E7EB;
+  text-align: center;line-height: 2;    padding: 0 2rem;
+}
+.contactLinks a:hover {
+  background-color: #22C55E;
+  color: #0F1115;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
+.contactLinks a {
+  border: 1px solid #22C55E;
+  color: #22C55E;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  line-height: 1;
+  margin-top: 10px;
+}
+.contactLinks {
+  display: flex;
+  justify-items: center;
+  justify-content: space-evenly;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+#contact h1{
+  line-height: 0;
+}
