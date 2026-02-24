@@ -38,9 +38,12 @@ function Navbar() {
 function Hero() {
   return (
     <div id="hero">
-      <video className="video-bg" autoPlay muted loop >
+      <div className="video-bg">
+        <video className="video-bg" autoPlay muted loop >
         <source src={video} type="video/mp4" />
       </video>
+      </div>
+      
       {/* <video className="video-bg" autoPlay muted loop>
         <source src="https://media.istockphoto.com/id/2172390006/video/computer-code-scrolling-on-a-black-screen.mp4?s=mp4-640x640-is&k=20&c=gyw0rpc2UEYO2bYJG5FBUxmOsBN2HpzICIROuexN6pQ=" type="video/mp4"/>
       </video> */}

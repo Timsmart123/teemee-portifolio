@@ -92,7 +92,6 @@ body{
 
 /* IF YOU WANT A VIDEO BACKGROUND to a hero and have text overlay it */
 .video-bg {
-  filter: blur(5px);
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -107,7 +106,7 @@ body{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0);
 }
 .Hero{
   text-align: center;
@@ -121,6 +120,7 @@ body{
   color: white;
   inset: 0;
   z-index: 1;
+  backdrop-filter: blur(5px);
 }
 .Hero > h2 {
   color: #E5E7EB;
