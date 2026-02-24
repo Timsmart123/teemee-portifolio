@@ -213,7 +213,7 @@ section > h1{
   flex-direction: row-reverse;
 }
 .projectRow> .descript{
-  padding: 2rem;
+  padding: 1rem;
   border-left: 4px solid #22c55e;
 }
 .projectRow.Reversed> .descript{
@@ -294,6 +294,9 @@ section {
   #nav-links > a {
     padding: 8px 10px;
     font-size: 0.9rem;
+  }
+  .contactLinks a{
+    padding: 0.7rem 0.5rem !important;
   }
 
 
