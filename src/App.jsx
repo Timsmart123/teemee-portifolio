@@ -121,7 +121,6 @@ function ProjectRow({html,css,js,react,img,reversed,title,script,link}){
         <p>Tech: {tech.join(", ")}{/* Joins each of the tech array by comma  */}</p>
         <a className="projectBtn" href={link}>View Project</a>
       </div>
-      <hr/>
     </div>
   )
 }
@@ -148,7 +147,7 @@ function Contact(){
         <p><strong>Let’s work together</strong></p>
         <p>Got a project or internship in mind? Let’s talk.</p>
         <span className="contactLinks">
-          <a href="mailto:your@email.com">Email</a>
+          <a href="mailto:nadioluwatimilehin@gmail.com">Email</a>
           <a href="https://github.com/yourusername" target="_blank">GitHub</a>
           <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
         </span>

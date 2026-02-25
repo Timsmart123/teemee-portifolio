@@ -120,7 +120,7 @@ body{
   color: white;
   inset: 0;
   z-index: 1;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 }
 .Hero > h2 {
   color: #E5E7EB;
@@ -295,8 +295,8 @@ section {
     padding: 8px 10px;
     font-size: 0.9rem;
   }
-  .contactLinks a{
-    padding: 0.7rem 0.5rem !important;
+  .contactLinks{
+    flex-direction: column; 
   }
 
 
@@ -319,7 +319,7 @@ section {
 #contact{
   background-color: #0F1115;
   color: #E5E7EB;
-  text-align: center;line-height: 2;    padding: 0 2rem;
+  text-align: center;line-height: 2; 
 }
 .contactLinks a:hover {
   background-color: #22C55E;
